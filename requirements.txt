@@ -9,4 +9,4 @@ pandas==1.1.5
 tensorflow-cpu
 opencv-python-headless 
 mediapipe
-libgl1-mesa-glx
+skia-python

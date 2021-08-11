@@ -19,7 +19,7 @@ no_sequences = 30
 sequence_length = 30
 mp_holistic = mp.solutions.holistic # Holistic model
 mp_drawing = mp.solutions.drawing_utils # Drawing utilities
-@app.route('/', methods=("POST", "GET"))
+@app.route('/', methods=["POST",'GET'])
 def index():
     """Video streaming home page."""
     return render_template('index.html')

@@ -10,6 +10,5 @@ tensorflow-cpu
 opencv-python-headless
 mediapipe
 skia-python
-libgl1-mesa-glx
 
 

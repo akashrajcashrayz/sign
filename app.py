@@ -142,9 +142,12 @@ def gen():
       cap.release()
       cv2.destroyAllWindows()
         
-def gen_frames():  
-    cap = cv2.VideoCapture(cv2.CAP_V4L2)	
+def gen_frames():
+	cap = cv2.VideoCapture(0)
+	
+    	
     while True:
+	print("working")
         success, frame = cap.read()  # read the camera frame
         if not success:
             break

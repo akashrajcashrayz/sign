@@ -1,5 +1,5 @@
-Flask
-gunicorn
+flask==1.1.1
+gunicorn==19.9.0
 itsdangerous
 Jinja2
 MarkupSafe
@@ -7,6 +7,8 @@ Werkzeug
 numpy
 pandas
 tensorflow-cpu
-opencv-python-headless 
+opencv-contrib-python>=4.0
 mediapipe
 skia-python
+
+

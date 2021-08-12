@@ -2,14 +2,13 @@ import numpy as np
 import os
 import time
 import mediapipe as mp
-from tensorflow import keras
 from flask import Flask, render_template, Response
 import cv2 
-
+import pickle
 
 app = Flask(__name__,template_folder= 'templates')
 
-model = keras.models.load_model('action.h5')
+model = pickle.load(open('action.h5', 'rb'))
 actions = np.array(['hello', 'thanks', 'iloveyou'])
 label_map = {label:num for num, label in enumerate(actions)}
 # Thirty videos worth of data

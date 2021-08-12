@@ -6,10 +6,11 @@ from flask import Flask, render_template, Response
 import cv2 
 import pickle
 import joblib
+import h5py
 
 app = Flask(__name__,template_folder= 'templates')
 
-model = joblib.load('action.h5')
+model = h5py.file('action.h5',r)
 actions = np.array(['hello', 'thanks', 'iloveyou'])
 label_map = {label:num for num, label in enumerate(actions)}
 # Thirty videos worth of data

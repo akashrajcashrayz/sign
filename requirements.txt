@@ -8,6 +8,5 @@ numpy
 tensorflow-cpu
 opencv-python-headless
 mediapipe
-skia-python
 
 

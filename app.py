@@ -143,7 +143,7 @@ def gen():
       cv2.destroyAllWindows()
         
 def gen_frames():
-	cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)
 	
     	
     while True:

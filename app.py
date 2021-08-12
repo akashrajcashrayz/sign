@@ -1,4 +1,5 @@
 import numpy as np
+from sys import stdout
 import os
 import time
 import mediapipe as mp
@@ -7,8 +8,10 @@ import cv2
 import pickle
 import joblib
 import h5py
-
+from flask_socketio import SocketIO
 app = Flask(__name__,template_folder= 'templates')
+app.logger.addHandler(logging.StreamHandler(stdout))
+socketio = SocketIO(app)
 
 model = h5py.File('action.h5','r')
 actions = np.array(['hello', 'thanks', 'iloveyou'])
@@ -157,4 +160,4 @@ def video_feed():
     
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	socketio.run(app)

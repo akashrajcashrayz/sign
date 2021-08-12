@@ -11,7 +11,7 @@ import h5py
 from flask_socketio import SocketIO
 app = Flask(__name__,template_folder= 'templates')
 
-socketio = SocketIO(app)
+
 
 model = h5py.File('action.h5','r')
 actions = np.array(['hello', 'thanks', 'iloveyou'])
@@ -160,4 +160,4 @@ def video_feed():
     
 
 if __name__ == "__main__":
-	socketio.run(app)
+	app.run()

@@ -5,10 +5,11 @@ import mediapipe as mp
 from flask import Flask, render_template, Response
 import cv2 
 import pickle
+import joblib
 
 app = Flask(__name__,template_folder= 'templates')
 
-model = pickle.load(open('action.h5', 'rb'))
+model = joblib.load('action.h5')
 actions = np.array(['hello', 'thanks', 'iloveyou'])
 label_map = {label:num for num, label in enumerate(actions)}
 # Thirty videos worth of data

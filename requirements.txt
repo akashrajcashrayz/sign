@@ -7,7 +7,7 @@ Werkzeug
 numpy
 pandas
 tensorflow-cpu
-opencv-python-headless
+opencv-python
 mediapipe
 skia-python
 

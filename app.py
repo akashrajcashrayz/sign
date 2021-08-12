@@ -76,7 +76,7 @@ def prob_viz(res, actions, input_frame, colors):
         cv2.putText(output_frame, actions[num], (0, 85+num*40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
         
     return output_frame
-cap = cv2.VideoCapture(cv2.CAP_V4L2)
+
 def gen():
   sequence = []
   sentence = []
@@ -143,7 +143,7 @@ def gen():
       cv2.destroyAllWindows()
         
 def gen_frames():  
-    cap = cv2.VideoCapture(0)	
+    cap = cv2.VideoCapture(-1)	
     while True:
         success, frame = cap.read()  # read the camera frame
         if not success:

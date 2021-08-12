@@ -10,7 +10,7 @@ import joblib
 import h5py
 from flask_socketio import SocketIO
 app = Flask(__name__,template_folder= 'templates')
-app.logger.addHandler(logging.StreamHandler(stdout))
+
 socketio = SocketIO(app)
 
 model = h5py.File('action.h5','r')

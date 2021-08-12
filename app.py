@@ -143,7 +143,7 @@ def gen():
       cv2.destroyAllWindows()
         
 def gen_frames():  
-    cap = cv2.VideoCapture(-1)	
+    cap = cv2.VideoCapture(0)	
     while True:
         success, frame = cap.read()  # read the camera frame
         if not success:
@@ -161,4 +161,4 @@ def video_feed():
     
 
 if __name__ == "__main__":
-	app.run()
+	app.run(threaded=True,dubug = False)

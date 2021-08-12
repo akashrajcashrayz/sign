@@ -10,7 +10,7 @@ import h5py
 
 app = Flask(__name__,template_folder= 'templates')
 
-model = h5py.file('action.h5',r)
+model = h5py.File('action.h5','r')
 actions = np.array(['hello', 'thanks', 'iloveyou'])
 label_map = {label:num for num, label in enumerate(actions)}
 # Thirty videos worth of data

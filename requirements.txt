@@ -6,7 +6,7 @@ MarkupSafe
 Werkzeug
 numpy>=1.9.2
 tensorflow-cpu
-opencv-python-headless
+opencv-python
 mediapipe
 
 

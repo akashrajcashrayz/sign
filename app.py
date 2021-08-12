@@ -147,7 +147,7 @@ def gen_frames():
 	
     	
     while True:
-	print("working")
+        print("1")
         success, frame = cap.read()  # read the camera frame
         if not success:
             break

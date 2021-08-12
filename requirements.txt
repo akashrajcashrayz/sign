@@ -4,8 +4,9 @@ itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-numpy==1.9.5
+numpy
 opencv-python
 mediapipe
+joblib
 
 

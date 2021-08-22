@@ -8,7 +8,6 @@ Werkzeug
 numpy
 opencv-python
 mediapipe
-joblib
-h5py
+tensorflow
 
 

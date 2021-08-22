@@ -5,15 +5,14 @@ import time
 import mediapipe as mp
 from flask import Flask, render_template, Response
 import cv2 
-import pickle
-import joblib
-import h5py
+from tensorflow import keras
+
 from flask_socketio import SocketIO
 app = Flask(__name__,template_folder= 'templates')
 
 
 
-model = h5py.File('action.h5','r')
+model = keras.models.load_model('action.h5')
 actions = np.array(['hello', 'thanks', 'iloveyou'])
 label_map = {label:num for num, label in enumerate(actions)}
 # Thirty videos worth of data
